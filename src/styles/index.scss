@@ -1,0 +1,430 @@
+@import 'mixin';
+@import 'variables';
+
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+  //min-width: 1200px;
+  overflow: hidden;
+  background-color: #000;
+  color: #fff;
+}
+
+html {
+  box-sizing: border-box;
+  background-color: #000;
+}
+
+ul, li, p{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+a,
+a:focus,
+a:hover {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+.wrap-black{
+  //padding-top:;
+  position: fixed;
+  padding-top: 100px;
+  top:0;
+  left:0;
+  width:100%;
+  min-height:100%;
+  max-height:100%;
+  background: #000;
+  text-align: center;
+  overflow: auto;
+}
+.wrap{
+  //position: fixed;
+  padding-top: 100px;
+  top:0;
+  left:0;
+  width:100%;
+  min-height:100%;
+  max-height:100%;
+  text-align: center;
+  overflow: auto;
+}
+
+.clearfix {
+  &:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+}
+
+//vue router transition css
+.fade-enter-active,
+.fade-leave-active {
+  transition: all .2s ease
+}
+
+.fade-enter,
+.fade-leave-active {
+  opacity: 0;
+}
+
+//main-container全局样式
+.app-main {
+  min-height: 100%;
+}
+
+.app-container {
+  padding: 0 24px 24px 24px;
+}
+
+.svg-icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
+
+
+.color-red {
+  color: $red;
+}
+
+.color-green {
+  color: $green;
+}
+
+.color-999 {
+  color: #999999;
+}
+
+.color-blue {
+  color: #4a90e2;
+}
+
+.fs12 {
+  font-size: 12px;
+}
+.fs14 {
+  font-size: 14px;
+}
+.fs18 {
+  font-size: 18px;
+}
+.fs24 {
+  font-size: 24px;
+}
+.fs36 {
+  font-size: 36px;
+}
+.fs48 {
+  font-size: 48px;
+}
+.fs64 {
+  font-size: 64px;
+}
+.fb{
+  font-weight: 700;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.clear {
+  clear: both;
+}
+
+//图标
+//.delete-icon {
+//  background: url('image/icon/delet.png');
+//  display: inline-block;
+//  width: 16px;
+//  height: 16px;
+//  background-size: 100% 100%;
+//  margin-right: 30px;
+//  cursor: pointer;
+//}
+
+.tl {
+  text-align: left !important;
+}
+.tr {
+  text-align: right;
+}
+.tc {
+  text-align: center;
+}
+.w200{
+  width: 200px;
+}
+.w300{
+  width: 300px;
+}
+.w800{
+  width: 800px;
+}
+
+
+.no-border {
+  border: none !important;
+}
+
+
+.display-none {
+  display: none;
+}
+
+.layout{
+  position: relative;
+  width: 1280px;
+  margin: 0 auto;
+}
+
+.btn{
+  display: inline-block;
+  background-color: #343538;
+  color: #fff;
+  font-size:14px;
+  text-align: center;
+  box-shadow: 0px 10px  30px rgba(0,0,0,.3);
+  cursor: pointer;
+  &:hover{
+    color: #fff;
+  }
+  &:visited{
+    color: #fff;
+  }
+}
+.animated {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.animated.delay-1s {
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
+.animated.delay-1 {
+  -webkit-animation-delay: .3s;
+  animation-delay: .3s;
+}
+.animated.delay-2 {
+  -webkit-animation-delay: .6s;
+  animation-delay: .6s;
+}
+.animated.delay-3 {
+  -webkit-animation-delay: .9s;
+  animation-delay: .9s;
+}
+.animated.delay-4 {
+  -webkit-animation-delay: 1.2s;
+  animation-delay: 1.2s;
+}
+.animated.delay-5 {
+  -webkit-animation-delay: 1.5s;
+  animation-delay: 1.5s;
+}
+.animated.delay-6 {
+  -webkit-animation-delay: 1.8s;
+  animation-delay: 1.8s;
+}
+.animated.delay-7 {
+  -webkit-animation-delay: 2.1s;
+  animation-delay: 2.1s;
+}
+.animated.delay-8 {
+  -webkit-animation-delay: 2.4s;
+  animation-delay: 2.4s;
+}
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
+@-webkit-keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -30%, 0);
+    transform: translate3d(0, -30%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -30%, 0);
+    transform: translate3d(0, -30%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+}
+
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 30%, 0);
+    transform: translate3d(0, 30%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 30%, 0);
+    transform: translate3d(0, 30%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+
+@-webkit-keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-30%, 0, 0);
+    transform: translate3d(-30%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-30%, 0, 0);
+    transform: translate3d(-30%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInLeft {
+  -webkit-animation-name: fadeInLeft;
+  animation-name: fadeInLeft;
+}
+
+@-webkit-keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(30%, 0, 0);
+    transform: translate3d(30%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(30%, 0, 0);
+    transform: translate3d(30%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInRight {
+  -webkit-animation-name: fadeInRight;
+  animation-name: fadeInRight;
+}
+
+.icon-down{
+  display: inline-block;
+  width:10px;
+  height: 10px;
+  border-top:1px solid #343538;
+  border-right:1px solid #343538;
+  transform: rotate(135deg);
+  vertical-align: 3px;
+}
